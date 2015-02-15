@@ -11,6 +11,6 @@ if (count($argv) == 3){
 	$reportController->getReport($argv[1],$argv[2]);
 
 }else{
-	throw new \Exception("Invalid number of parameters");
+	die("Invalid number of parameters");
 	
 }
