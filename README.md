@@ -25,3 +25,19 @@ Use any 3rd party framework or components as you see fit. Please use composer wh
 Your task will be assessed on your use of OOP, dependency injection, unit testing and commenting against the level of the position for which you have applied.
 
 Points will be deducted for leaving any redundant files in your code (e.g. left overs from framework skeleton app creation).
+
+### Install
+
+git clone https://github.com/luisrafaelmartins/taskaw.git
+
+then run composer install.
+
+### Testing
+
+Run on the specific folder the command:
+
+phpunit --bootstrap bootstrap.php tests/{TESTCLASS}
+
+### usage
+
+php index.php {FILE} {MERCHANTID}
