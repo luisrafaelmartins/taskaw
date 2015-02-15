@@ -9,7 +9,7 @@ class CSVReader{
         if (file_exists($file)){
             $this->handle = fopen ($file,"r");
         }else{
-            throw new Exception("The file {$file} dosn't exists");
+            die("The file {$file} dosn't exists");
         }
         
     }
@@ -40,7 +40,7 @@ class CSVReader{
         rewind($this->handle);
         $read =  $this->readLine();
         if( $read === FALSE){
-            throw new Exception("File is empty");
+            die("File is empty");
             
         }else{
             $this->headers = $read;
