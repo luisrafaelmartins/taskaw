@@ -24,7 +24,11 @@ class Merchant extends Model
 	 */
     public function getTransactions($id)
     {
-        return $this->data[$id]->transactions;
+        if (isset($this->data[$id])){
+    		return $this->data[$id]->transactions;
+    	}else{
+        	die("Merchant doesn't exists");
+        }
     }
 	/**
 	 * get merchant info 
@@ -39,7 +43,7 @@ class Merchant extends Model
     		}
     	}
 
-    	throw new \Exception("Merchant doesn't exists");
+    	die("Merchant doesn't exists");
 
     }
     /**
