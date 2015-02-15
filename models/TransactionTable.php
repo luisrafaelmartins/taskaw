@@ -26,7 +26,7 @@ class TransactionTable extends Model
                 }
             }
         }else{
-            throw new \Exception("Wrong file formatation");
+            die("Wrong file formatation");
             
         }
     	
